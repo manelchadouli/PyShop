@@ -1,0 +1,11 @@
+/* products/css/custom.css */
+
+.container {
+    margin-top: 20px; /* Adjust the spacing between the navbar and Register/Sign In section */
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 40px; /* Adjust the spacing for larger screens */
+    }
+}

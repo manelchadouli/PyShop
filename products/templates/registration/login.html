@@ -1,0 +1,39 @@
+
+
+{% load static %}
+
+{% block content %}
+<div class="login-page">
+<div class="login_form_container">
+  <div class="login_form">
+    <h2>Login</h2>
+    <form method="post" class="needs-validation" novalidate>
+      {% csrf_token %}
+      <div class="input_group">
+      <i class="bi bi-person-fill"></i>
+
+        {{ form.username.label_tag }}
+        {{ form.username }}
+      </div>
+      <div class="input_group">
+        <i class="bi bi-unlock"></i>
+
+         {{ form.password.label_tag }}
+        {{ form.password }}
+      </div>
+      <button class="button_group" id="login_button">
+        login
+      </button>
+    </form>
+    <div class="footer">
+      <a>Forgot Password ?</a>
+      <a>SingUp</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<link rel="stylesheet" href="{% static 'products/css/login.css' %}">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+{% endblock %}
